@@ -16,6 +16,10 @@ namespace GameOfLife.View
         [Header("UI Text")]
         [SerializeField]
         private TMP_Text txtPlay;
+        [SerializeField]
+        private TMP_Text txtAlive;
+        [SerializeField]
+        private TMP_Text txtGeneration;
 
         public Action OnClickedPlay;
         public Action OnClickedNext;
@@ -29,6 +33,11 @@ namespace GameOfLife.View
         {
             btnNext.interactable = !playing;
             txtPlay.text = playing ? "Pause" : "Play";
+        }
+        public void SetStats(int aliveCount, int generationCount)
+        {
+            txtAlive.text = aliveCount.ToString();
+            txtGeneration.text = generationCount.ToString();
         }
 
         #region UNITY UI EVENTS

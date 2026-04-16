@@ -12,10 +12,15 @@ namespace GameOfLife.Presenter
         [SerializeField] 
         private Camera targetCamera;
 
+        public int Alive => aliveCount;
+        public int Generation => generationCount;
+
         private int width = 64;
         private int height = 64;
         private float tickInterval = 0.2f;
         private float timer;
+        private int generationCount;
+        private int aliveCount;
 
         private GridModel model;
         private InputService input;
@@ -61,6 +66,9 @@ namespace GameOfLife.Presenter
             input = new InputService(targetCamera, width, height);
             gridView.Initialize(width, height);
 
+            generationCount = 0;
+            CalculateAlive();
+
             dirty = true;
             isInitialized = true;
         }
@@ -71,12 +79,16 @@ namespace GameOfLife.Presenter
         public void Next()
         {
             simulation.Tick(model);
+            generationCount++;
+            CalculateAlive();
             dirty = true;
         }
         public void Reset()
         {
+            generationCount = 0;
             model.Clear();
             gridView.Clear();
+            CalculateAlive();
         }
         private void UpdateInput()
         {
@@ -96,9 +108,24 @@ namespace GameOfLife.Presenter
             if (timer >= tickInterval)
             {
                 timer = 0f;
-                simulation.Tick(model);
-                dirty = true;
+                Next();
             }
+        }
+        private void CalculateAlive()
+        {
+            aliveCount = 0;
+
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    if (model.GetCell(x, y))
+                    {
+                        aliveCount++;
+                    }
+                }
+            }
+            
         }
         private void DrawCell()
         {

@@ -26,6 +26,13 @@ namespace GameOfLife.Manager
 
             uiPresenter.OnReceivedOptionChanged -= HandleOptionChanged;
         }
+        private void Update()
+        {
+            uiPresenter.SetStats(
+                gridPresenter.Alive, 
+                gridPresenter.Generation
+            );
+        }
         #endregion
 
         #region LISTENERS FOR OPTIONS

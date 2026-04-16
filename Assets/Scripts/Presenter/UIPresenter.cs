@@ -51,7 +51,10 @@ namespace GameOfLife.Presenter
             optionView.OnReceivedOptionChanged -= ReceivedOptionChanged;           
         }
         #endregion
-
+        public void SetStats(int aliveCount, int generationCount)
+        {
+            toolView.SetStats(aliveCount, generationCount);
+        }
         private void ReceivedPlayClicked()
         {
             toolModel.TogglePlay();
