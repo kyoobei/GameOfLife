@@ -208,19 +208,7 @@ MonoBehaviour:
   m_Value: 0.2
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 712844940}
-        m_TargetAssemblyTypeName: GameOfLife.View.OptionView, Assembly-CSharp
-        m_MethodName: UpdateSpeed
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &20207274
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,19 +961,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 712844940}
-        m_TargetAssemblyTypeName: GameOfLife.View.OptionView, Assembly-CSharp
-        m_MethodName: UpdateWidth
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1653,7 +1629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputWidth: {fileID: 408299999}
   inputHeight: {fileID: 1095900782}
-  inputSpeed: {fileID: 4932052}
+  sliderSpeed: {fileID: 4932052}
 --- !u!1 &716563177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,9 +1885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc182ecd0550ce442b636b678a8e1ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 32
-  height: 32
-  tickInterval: 0.2
   gridView: {fileID: 2125122896}
   targetCamera: {fileID: 330585545}
 --- !u!1 &866052544
@@ -2085,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.4648172}
   m_AnchorMax: {x: 1, y: 0.6154517}
-  m_AnchoredPosition: {x: 0.39241, y: 0.099998474}
+  m_AnchoredPosition: {x: 0.39241028, y: 0.099998474}
   m_SizeDelta: {x: -0.000015259, y: -0.9799957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1039648931
@@ -2350,19 +2323,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 712844940}
-        m_TargetAssemblyTypeName: GameOfLife.View.OptionView, Assembly-CSharp
-        m_MethodName: UpdateHeight
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3023,8 +2984,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3149,7 +3110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 130.21, y: 0}
+  m_AnchoredPosition: {x: 130.21002, y: 0}
   m_SizeDelta: {x: -260.66495, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501703895
@@ -3226,7 +3187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -130.3325, y: 0}
+  m_AnchoredPosition: {x: -130.33252, y: 0}
   m_SizeDelta: {x: -260.66495, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578683674
@@ -4240,8 +4201,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
