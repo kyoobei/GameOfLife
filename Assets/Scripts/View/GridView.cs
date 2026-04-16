@@ -39,9 +39,12 @@ namespace GameOfLife.View
         public void Clear()
         {
             for (int x = 0; x < width; x++)
-            for (int y = 0; y < height; y++)
-                texture.SetPixel(x, y, Color.black);
-
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    texture.SetPixel(x, y, Color.black);
+                }
+            }
             texture.Apply();
         }
     }

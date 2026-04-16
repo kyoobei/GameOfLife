@@ -45,7 +45,8 @@ namespace GameOfLife.Service
             {
                 for (int neighborY = -1; neighborY <= 1; neighborY++)
                 {
-                    if (neighborX == 0 && neighborY == 0) continue;
+                    if (neighborX == 0 && neighborY == 0) 
+                        continue;
 
                     if (model.GetCell(x + neighborX, y + neighborY))
                         count++;
