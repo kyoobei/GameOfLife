@@ -5,7 +5,8 @@ namespace GameOfLife.View
 {
     public class GridView : MonoBehaviour, IGridView
     {
-        [SerializeField] private Material material;
+        [SerializeField] 
+        private Material material;
 
         private Texture2D texture;
         private int width;

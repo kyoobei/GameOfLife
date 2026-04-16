@@ -24,19 +24,16 @@ namespace GameOfLife.Model
             this.height = height;
             cells = new bool[width, height];
         }
-
         public bool GetCell(int x, int y)
         {
             if (!IsValid(x, y)) return false;
             return cells[x, y];
         }
-
         public void SetCell(int x, int y, bool value)
         {
             if (!IsValid(x, y)) return;
             cells[x, y] = value;
         }
-
         public void Clear()
         {
             for (int x = 0; x < width; x++)
